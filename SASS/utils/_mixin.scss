@@ -1,5 +1,10 @@
 //  MIXIN()
 
+// propriete box-shadow pour boutons et cartes
+@mixin box-shadow($shadow-color) {
+  box-shadow: 2px 2px 5px $shadow-color;
+}
+
 // les styles des boutons de la section .fonctionnement de la page d'acceuil
 @mixin style-bouton-fonctionnement {
   &__bouton {
@@ -30,10 +35,55 @@
       border: none;
       border-radius: 20px;
       font-weight: 700;
-      box-shadow: 2px 2px 5px $gris;
+      @include box-shadow($gris);
       &:hover {
         background-color: lighten($primaire, 30%);
       }
+    }
+  }
+}
+
+// les styles des cartes de la section .container-restaurant de la page d'acceuil
+@mixin style-carte-restaurant {
+  .carte-restaurant {
+    margin-bottom: 20px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    height: 250px;
+    @include box-shadow($gris);
+    img {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      height: 75%;
+    }
+
+    &__text {
+      span {
+        display: block;
+      }
+      span:first-child {
+        font-weight: bold;
+      }
+      width: 85%;
+      padding: 5px 10px;
+    }
+
+    &__heart {
+      display: flex;
+      align-items: center;
+    }
+    &__nouveau {
+      position: absolute;
+      left: 70%;
+      top: 7%;
+      padding: 5px 10px;
+      background-color: $tertiaire;
+      color: darken($tertiaire, 40%);
+      font-weight: bold;
+      border-radius: 3px;
     }
   }
 }
