@@ -81,15 +81,17 @@ main .fonctionnement__bouton button {
 }
 
 main .fonctionnement__bouton button:hover {
-  background-color: #d7c0f2;
+  background-color: #e4d5f6;
 }
 
 main .container-restaurants {
+  border: solid 1px black;
   background-color: #f2f2f2;
   padding: 30px 20px;
 }
 
 main .container-restaurants .carte-restaurant {
+  margin-bottom: 20px;
   position: relative;
   background-color: white;
   display: -webkit-box;
@@ -98,29 +100,29 @@ main .container-restaurants .carte-restaurant {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 25px;
-  height: 200px;
+  height: 250px;
 }
 
 main .container-restaurants .carte-restaurant img {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  height: 70%;
+  height: 75%;
 }
 
-main .container-restaurants .carte-restaurant .text {
+main .container-restaurants .carte-restaurant__text {
   width: 85%;
   padding: 5px 10px;
 }
 
-main .container-restaurants .carte-restaurant .text span:first-child {
-  font-weight: bold;
-}
-
-main .container-restaurants .carte-restaurant span {
+main .container-restaurants .carte-restaurant__text span {
   display: block;
 }
 
-main .container-restaurants .carte-restaurant .heart {
+main .container-restaurants .carte-restaurant__text span:first-child {
+  font-weight: bold;
+}
+
+main .container-restaurants .carte-restaurant__heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,11 +146,6 @@ footer {
   color: white;
   background-color: #2b2b2b;
   padding: 30px 20px;
-}
-
-footer h3,
-footer p {
-  margin-top: 10px;
 }
 
 footer h3 {

@@ -1,0 +1,39 @@
+//  MIXIN()
+
+// les styles des boutons de la section .fonctionnement de la page d'acceuil
+@mixin style-bouton-fonctionnement {
+  &__bouton {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    span {
+      background-color: $primaire;
+      padding: 3px 6px;
+      border-radius: 50%;
+      color: white;
+      position: absolute;
+      left: -2px;
+      top: 17px;
+    }
+    i {
+      position: absolute;
+      left: 12%;
+      top: 20px;
+      &:hover {
+        color: $primaire;
+      }
+    }
+
+    button {
+      width: 95%;
+      padding: 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 700;
+      box-shadow: 2px 2px 5px $gris;
+      &:hover {
+        background-color: lighten($primaire, 30%);
+      }
+    }
+  }
+}

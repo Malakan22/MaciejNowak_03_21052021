@@ -1,21 +1,6 @@
-$primaire: #9356dc;
-$secondaire: #ff79da;
-$tertiaire: #99e2d0;
-$gris-pale: #f2f2f2;
-$gris: #b9b9b9;
-$gris-fonce: #2b2b2b;
-$padding-container: 30px 20px;
-
-body {
-  margin: 0;
-  font-family: "roboto", sans-serif;
-}
-
-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
+@import "./base/fondations";
+@import "./utils/variables";
+@import "./utils/mixin";
 
 header {
   text-align: center;
@@ -48,71 +33,44 @@ header {
 main {
   .fonctionnement {
     padding: $padding-container;
-    &__bouton {
-      text-align: center;
-
-      position: relative;
-      margin-bottom: 20px;
-      span {
-        background-color: $primaire;
-        padding: 3px 6px;
-        border-radius: 50%;
-        color: white;
-        position: absolute;
-        left: -2px;
-        top: 17px;
-      }
-      i {
-        position: absolute;
-        left: 12%;
-        top: 20px;
-        &:hover {
-          color: $primaire;
-        }
-      }
-
-      button {
-        width: 95%;
-        padding: 20px;
-        border: none;
-        border-radius: 20px;
-        font-weight: 700;
-        box-shadow: 2px 2px 5px $gris;
-        &:hover {
-          background-color: lighten($primaire, 25%);
-        }
-      }
-    }
+    @include style-bouton-fonctionnement();
   }
 
   // SECTION CARTES RESTAURANTS
 
+  @mixin style-carte-restaurant {
+  }
+
   .container-restaurants {
+    border: solid 1px black;
     background-color: $gris-pale;
     padding: $padding-container;
     .carte-restaurant {
+      margin-bottom: 20px;
       position: relative;
       background-color: white;
       display: flex;
       flex-wrap: wrap;
       border-radius: 25px;
-      height: 200px;
+      height: 250px;
       img {
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        height: 70%;
+        height: 75%;
       }
-      .text {
+
+      &__text {
+        span {
+          display: block;
+        }
         span:first-child {
           font-weight: bold;
         }
         width: 85%;
         padding: 5px 10px;
       }
-      span {
-        display: block;
-      }
-      .heart {
+
+      &__heart {
         display: flex;
         align-items: center;
       }
@@ -135,10 +93,6 @@ footer {
   color: white;
   background-color: $gris-fonce;
   padding: $padding-container;
-  h3,
-  p {
-    margin-top: 10px;
-  }
   h3 {
     font-family: "shrikhand";
     font-weight: 500;
