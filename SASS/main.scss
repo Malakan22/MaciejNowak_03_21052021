@@ -4,19 +4,22 @@
 
 header {
   text-align: center;
-  background-color: #f2f2f2;
-  .adresse {
-    background-color: $gris;
-    padding: 0.5em 0em;
-  }
+  background-color: $gris-pale;
+
   h1 {
     font-family: "shrikhand";
     background-color: white;
     margin: 0px;
-    margin-bottom: 5px;
+    // margin-bottom: 15px;
     padding: 10px;
-    box-shadow: 0px 0px 50px $gris-fonce;
+    // box-shadow: 0px 0px 50px $gris-fonce;
+    @include box-shadow($gris-pale);
   }
+  .adresse {
+    background-color: $gris;
+    padding: 0.5em 0em;
+  }
+
   button {
     background-color: $secondaire;
     border-radius: 25px;
@@ -41,6 +44,10 @@ main {
   .container-restaurants {
     background-color: $gris-pale;
     padding: $padding-container;
+    a,
+    a:visited {
+      color: black;
+    }
 
     @include style-carte-restaurant();
   }
@@ -51,6 +58,12 @@ footer {
   color: white;
   background-color: $gris-fonce;
   padding: $padding-container;
+  a {
+    color: white;
+    &:hover {
+      color: $primaire;
+    }
+  }
   h3 {
     font-family: "shrikhand";
     font-weight: 500;

@@ -13,11 +13,11 @@
     margin-bottom: 20px;
     span {
       background-color: $primaire;
-      padding: 3px 6px;
+      padding: 3px 7px;
       border-radius: 50%;
       color: white;
       position: absolute;
-      left: -2px;
+      left: 0px;
       top: 17px;
     }
     i {
@@ -53,6 +53,7 @@
     flex-wrap: wrap;
     border-radius: 25px;
     height: 250px;
+
     @include box-shadow($gris);
     img {
       border-top-left-radius: 25px;
@@ -61,14 +62,11 @@
     }
 
     &__text {
-      span {
-        display: block;
-      }
       span:first-child {
         font-weight: bold;
       }
-      width: 85%;
-      padding: 5px 10px;
+      width: 80%;
+      padding: 5px 15px;
     }
 
     &__heart {
