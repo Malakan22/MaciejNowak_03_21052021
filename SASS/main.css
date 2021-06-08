@@ -27,20 +27,23 @@ header h1 {
   font-family: "shrikhand";
   background-color: white;
   margin: 0px;
+  margin-bottom: 2px;
   padding: 10px;
-  -webkit-box-shadow: 2px 2px 5px #f2f2f2;
-          box-shadow: 2px 2px 5px #f2f2f2;
+  -webkit-box-shadow: 2px 2px 5px #b8b8b8;
+          box-shadow: 2px 2px 5px #b8b8b8;
 }
 
 header .adresse {
-  background-color: #b9b9b9;
+  background-color: #dfdfdf;
   padding: 0.5em 0em;
+  font-weight: 700;
 }
 
-header button {
-  background-color: #ff79da;
+header .reservez-menu__bouton {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 25px;
-  padding: 10px;
+  padding: 15px 20px;
   border: 0px;
   margin-bottom: 40px;
   color: white;
@@ -83,8 +86,8 @@ main .fonctionnement__bouton button {
   border: none;
   border-radius: 20px;
   font-weight: 700;
-  -webkit-box-shadow: 2px 2px 5px #b9b9b9;
-          box-shadow: 2px 2px 5px #b9b9b9;
+  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
+          box-shadow: 2px 2px 5px #dfdfdf;
 }
 
 main .fonctionnement__bouton button:hover {
@@ -112,8 +115,8 @@ main .container-restaurants .carte-restaurant {
       flex-wrap: wrap;
   border-radius: 25px;
   height: 250px;
-  -webkit-box-shadow: 2px 2px 5px #b9b9b9;
-          box-shadow: 2px 2px 5px #b9b9b9;
+  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
+          box-shadow: 2px 2px 5px #dfdfdf;
 }
 
 main .container-restaurants .carte-restaurant img {
@@ -153,7 +156,7 @@ main .container-restaurants .carte-restaurant__nouveau {
 
 footer {
   color: white;
-  background-color: #2b2b2b;
+  background-color: #383838;
   padding: 30px 20px;
 }
 
