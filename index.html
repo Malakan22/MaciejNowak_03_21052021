@@ -23,7 +23,7 @@
       <h1>ohmyfood</h1>
       <div class="adresse">
         <i class="fas fa-map-marker-alt"></i>
-        Paris, Belleville
+        <input class="adresse__input" type="text" placeholder="Votre emplacement..."></input>
       </div>
 
       <div class="reserver-menu">
@@ -31,7 +31,9 @@
         <p>
           Découvrez des restaurants d'exception, séléctionbnés par nos soins.
         </p>
-        <button class="reservez-menu__bouton">Explorer nos restaurants</button>
+        <a href="#restaurants">
+          <button class="reservez-menu__bouton" type="submit">Explorer nos restaurants</button>
+        </a>
       </div>
     </header>
 
@@ -61,10 +63,10 @@
       <!-- RESTAURANTS -->
 
       <section class="container-restaurants">
-        <h2>Restaurants</h2>
+        <h2 id="restaurants">Restaurants</h2>
 
         <a href="./pages_menu/La_Palette_du_Gout.html">
-          <div class="carte-restaurant">
+          <article class="carte-restaurant">
             <img src="images/La-palette-du-gout.jpg" alt="" />
             <div class="carte-restaurant__text">
               <span>La palette du goût</span>
@@ -74,11 +76,11 @@
               <i class="far fa-heart"></i>
             </div>
             <span class="carte-restaurant__nouveau">Nouveau</span>
-          </div>
+          </article>
         </a>
 
         <a href="./pages_menu/La_Note_Enchantee.html">
-          <div class="carte-restaurant">
+          <article class="carte-restaurant">
             <img src="images/La_note_enchantee.jpg" alt="" />
             <div class="carte-restaurant__text">
               <span>La note enchantée</span>
@@ -88,11 +90,11 @@
               <i class="far fa-heart"></i>
             </div>
             <span class="carte-restaurant__nouveau">Nouveau</span>
-          </div>
+          </article>
         </a>
 
         <a href="./pages_menu/A_la_francaise.html">
-          <div class="carte-restaurant">
+          <article class="carte-restaurant">
             <img src="images/A-la-francaise.jpg" alt="" />
             <div class="carte-restaurant__text">
               <span>À la française</span>
@@ -101,11 +103,11 @@
             <div class="carte-restaurant__heart">
               <i class="far fa-heart"></i>
             </div>
-          </div>
+          </article>
         </a>
 
         <a href="./pages_menu/Le_delice_des_sens.html">
-          <div class="carte-restaurant">
+          <article class="carte-restaurant">
             <img src="images/Le-delice-des-sens.jpg" alt="" />
             <div class="carte-restaurant__text">
               <span>Le délice des sens</span>
@@ -114,7 +116,7 @@
             <div class="carte-restaurant__heart">
               <i class="far fa-heart"></i>
             </div>
-          </div>
+          </article>
         </a>
       </section>
     </main>
@@ -137,7 +139,7 @@
       </p>
 
       <p><a href="#">Mentions légales</a></p>
-      <address><a href="mailto:web@example.com">Contact</a></address>
+      <p><a href="mailto:web@example.com">Contact</a></p>
     </footer>
   </body>
 </html>

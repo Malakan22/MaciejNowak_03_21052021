@@ -180,4 +180,116 @@ footer h3 {
   font-family: "shrikhand";
   font-weight: 500;
 }
-/*# sourceMappingURL=main.css.map */
+
+body {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.top__home {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.top__home h1 {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+main {
+  background-color: #f2f2f2;
+  position: relative;
+  top: -50px;
+  padding: 30px 20px;
+  padding-top: 10px;
+  border-radius: 25px;
+}
+
+.titre-restaurant {
+  font-family: "shrikhand";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+.menu__souligner {
+  content: "";
+  width: 40px;
+  border-top: solid 2px #99e2d0;
+  margin-bottom: 10px;
+}
+
+.menu__carte {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.menu__carte--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu__carte--description div {
+  width: 100%;
+}
+
+.menu__carte--description div span:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu__carte--description div span:nth-child(2) {
+  font-size: 13px;
+}
+
+.menu__carte--description .prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.commander {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.commander button {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 25px;
+  padding: 15px 20px;
+  border: 0px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 700;
+  width: 60%;
+}
+/*# sourceMappingURL=La_palette_du_gout.css.map */

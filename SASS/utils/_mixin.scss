@@ -5,6 +5,17 @@
   box-shadow: 2px 2px 5px $shadow-color;
 }
 
+@mixin bouton-principale {
+  background-image: linear-gradient(to bottom right, $secondaire, $primaire);
+  border-radius: 25px;
+  padding: 15px 20px;
+  border: 0px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 700;
+  width: 60%;
+}
+
 // les styles des boutons de la section .fonctionnement de la page d'acceuil
 @mixin style-bouton-fonctionnement {
   &__bouton {
@@ -92,6 +103,7 @@
   color: white;
   background-color: $gris-fonce;
   padding: $padding-container;
+  margin-top: -50px;
   a {
     color: white;
     &:hover {

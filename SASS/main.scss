@@ -12,23 +12,23 @@ header {
     margin: 0px;
     margin-bottom: 2px;
     padding: 10px;
-
     @include box-shadow(lighten($gris-fonce, 50%));
   }
   .adresse {
+    &:focus {
+    }
     background-color: $gris;
     padding: 0.5em 0em;
     font-weight: 700;
+    &__input {
+      border: none;
+      background-color: $gris;
+      padding: 10px;
+    }
   }
 
   .reservez-menu__bouton {
-    background-image: linear-gradient(to bottom right, $secondaire, $primaire);
-    border-radius: 25px;
-    padding: 15px 20px;
-    border: 0px;
-    margin-bottom: 40px;
-    color: white;
-    font-weight: 700;
+    @include bouton-principale();
   }
 }
 
