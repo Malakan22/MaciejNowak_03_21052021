@@ -13,10 +13,16 @@ body {
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    a {
+      width: 5%;
+      padding-left: 25px;
+    }
     h1 {
+      width: 100%;
       box-shadow: none;
       justify-content: start;
+      padding-left: 0px;
     }
   }
 }
@@ -56,4 +62,8 @@ main {
   button {
     @include bouton-principale();
   }
+}
+
+.footer-pages-menu {
+  margin-top: -50px;
 }

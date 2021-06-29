@@ -55,6 +55,16 @@ header .reservez-menu__bouton {
   color: white;
   font-weight: 700;
   width: 60%;
+  cursor: pointer;
+  postition: relative;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+header .reservez-menu__bouton:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  color: #6023a9;
 }
 
 main .fonctionnement {
@@ -122,6 +132,7 @@ main .container-restaurants .carte-restaurant {
       flex-wrap: wrap;
   border-radius: 25px;
   height: 250px;
+  cursor: pointer;
   -webkit-box-shadow: 2px 2px 5px #dfdfdf;
           box-shadow: 2px 2px 5px #dfdfdf;
 }
@@ -165,7 +176,6 @@ footer {
   color: white;
   background-color: #383838;
   padding: 30px 20px;
-  margin-top: -50px;
 }
 
 footer a {
@@ -194,16 +204,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.top__home a {
+  width: 5%;
+  padding-left: 25px;
 }
 
 .top__home h1 {
+  width: 100%;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  padding-left: 0px;
 }
 
 main {
@@ -291,5 +309,19 @@ main {
   color: white;
   font-weight: 700;
   width: 60%;
+  cursor: pointer;
+  postition: relative;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.commander button:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  color: #6023a9;
+}
+
+.footer-pages-menu {
+  margin-top: -50px;
 }
 /*# sourceMappingURL=La_palette_du_gout.css.map */
