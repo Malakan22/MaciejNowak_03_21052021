@@ -1,0 +1,33 @@
+@mixin souligner {
+  content: "";
+  width: 40px;
+  border-top: solid 2px $tertiaire;
+  margin-bottom: 10px;
+}
+
+@mixin cartes-menu {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  &--description {
+    display: flex;
+    justify-content: space-evenly;
+    & div {
+      width: 100%;
+      span:first-child {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      span:nth-child(2) {
+        font-size: 13px;
+      }
+    }
+    .prix {
+      display: flex;
+      align-items: flex-end;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}

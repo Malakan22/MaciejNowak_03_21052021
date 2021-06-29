@@ -1,0 +1,58 @@
+// Page d'acceuil : home.scss
+
+header {
+  text-align: center;
+  background-color: $gris-pale;
+
+  h1 {
+    font-family: "shrikhand";
+    background-color: white;
+    margin: 0px;
+    margin-bottom: 2px;
+    padding: 10px;
+    @include box-shadow(lighten($gris-fonce, 50%));
+  }
+
+  .adresse {
+    background-color: $gris;
+    padding: 0.5em 0em;
+    font-weight: 700;
+    &__input {
+      background-color: $gris;
+      padding: 10px;
+      border: none;
+      // &:focus {
+      //   border: none;
+      // }
+    }
+  }
+
+  #home-page {
+    margin-bottom: 100px;
+  }
+
+  .reservez-menu__bouton {
+    @include bouton-principale();
+  }
+}
+
+// SECTION FOCNTIONNEMENT
+main {
+  .fonctionnement {
+    background-color: white;
+    padding: $padding-container;
+    @include style-bouton-fonctionnement();
+  }
+
+  // SECTION CARTES RESTAURANTS
+  .container-restaurants {
+    background-color: $gris-pale;
+    padding: $padding-container;
+    a,
+    a:visited {
+      color: black;
+    }
+
+    @include style-carte-restaurant();
+  }
+}

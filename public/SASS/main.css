@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+span {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+header h1 {
+  font-family: "shrikhand";
+  background-color: white;
+  margin: 0px;
+  margin-bottom: 2px;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 5px #b8b8b8;
+          box-shadow: 2px 2px 5px #b8b8b8;
+}
+
+header .adresse {
+  background-color: #dfdfdf;
+  padding: 0.5em 0em;
+  font-weight: 700;
+}
+
+header .adresse__input {
+  background-color: #dfdfdf;
+  padding: 10px;
+  border: none;
+}
+
+header #home-page {
+  margin-bottom: 100px;
+}
+
+header .reservez-menu__bouton {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 25px;
+  padding: 15px 20px;
+  border: 0px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 700;
+  width: 60%;
+  cursor: pointer;
+  postition: relative;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+header .reservez-menu__bouton:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  color: #6c27be;
+}
+
+main .fonctionnement {
+  background-color: white;
+  padding: 30px 20px;
+}
+
+main .fonctionnement__bouton {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+main .fonctionnement__bouton span {
+  background-color: #9356dc;
+  padding: 3px 7px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  left: 0px;
+  top: 17px;
+}
+
+main .fonctionnement__bouton i {
+  position: absolute;
+  left: 12%;
+  top: 20px;
+}
+
+main .fonctionnement__bouton i:hover {
+  color: #9356dc;
+}
+
+main .fonctionnement__bouton button {
+  width: 95%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
+          box-shadow: 2px 2px 5px #dfdfdf;
+}
+
+main .fonctionnement__bouton button:hover {
+  background-color: #e4d5f6;
+}
+
+main .container-restaurants {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+}
+
+main .container-restaurants a,
+main .container-restaurants a:visited {
+  color: black;
+}
+
+main .container-restaurants .carte-restaurant {
+  margin-bottom: 20px;
+  position: relative;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 15px;
+  height: 200px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
+          box-shadow: 2px 2px 5px #dfdfdf;
+}
+
+main .container-restaurants .carte-restaurant img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 75%;
+}
+
+main .container-restaurants .carte-restaurant__text {
+  width: 80%;
+  padding: 5px 15px;
+}
+
+main .container-restaurants .carte-restaurant__text span:first-child {
+  font-weight: bold;
+}
+
+main .container-restaurants .carte-restaurant__heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-restaurants .carte-restaurant__nouveau {
+  position: absolute;
+  left: 65%;
+  top: 7%;
+  padding: 5px 10px;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+body {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.top__home {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.top__home a {
+  width: 5%;
+  padding-left: 25px;
+}
+
+.top__home h1 {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-left: 0px;
+}
+
+.top__image {
+  max-height: 300px;
+}
+
+main {
+  background-color: #f2f2f2;
+  position: relative;
+  top: -50px;
+  padding: 30px 20px;
+  padding-top: 10px;
+  border-radius: 25px;
+}
+
+.titre-restaurant {
+  font-family: "shrikhand";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+.menu__souligner {
+  content: "";
+  width: 40px;
+  border-top: solid 2px #99e2d0;
+  margin-bottom: 10px;
+}
+
+.menu__carte {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.menu__carte--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu__carte--description div {
+  width: 100%;
+}
+
+.menu__carte--description div span:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu__carte--description div span:nth-child(2) {
+  font-size: 13px;
+}
+
+.menu__carte--description .prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.commander {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.commander button {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 25px;
+  padding: 15px 20px;
+  border: 0px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 700;
+  width: 60%;
+  cursor: pointer;
+  postition: relative;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.commander button:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  color: #6c27be;
+}
+
+.footer-pages-menu {
+  margin-top: -50px;
+}
+
+footer {
+  color: white;
+  background-color: #383838;
+  padding: 30px 20px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #9356dc;
+}
+
+footer h3 {
+  font-family: "shrikhand";
+  font-weight: 500;
+}
+/*# sourceMappingURL=main.css.map */

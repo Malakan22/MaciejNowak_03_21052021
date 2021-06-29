@@ -1,0 +1,71 @@
+@import "../utils/mixin-cartes-menu";
+
+body {
+  position: relative;
+  background-color: $gris-pale;
+}
+
+// HEADER
+
+.top {
+  &__home {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+      width: 5%;
+      padding-left: 25px;
+    }
+    h1 {
+      width: 100%;
+      box-shadow: none;
+      justify-content: start;
+      padding-left: 0px;
+    }
+  }
+  &__image {
+    max-height: 300px;
+  }
+}
+
+// MAIN
+main {
+  background-color: $gris-pale;
+  position: relative;
+  top: -50px;
+  padding: $padding-container;
+  padding-top: 10px;
+  border-radius: 25px;
+}
+
+.titre-restaurant {
+  font-family: $font-logo;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+// CARTES MENU
+
+.menu {
+  &__souligner {
+    @include souligner();
+  }
+  &__carte {
+    @include cartes-menu();
+  }
+}
+
+.commander {
+  text-align: center;
+  margin-top: 40px;
+  button {
+    @include bouton-principale();
+  }
+}
+
+.footer-pages-menu {
+  margin-top: -50px;
+}
