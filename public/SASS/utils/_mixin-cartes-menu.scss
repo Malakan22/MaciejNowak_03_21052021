@@ -10,10 +10,25 @@
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
   @include box-shadow($gris);
   &--description {
     display: flex;
     justify-content: space-evenly;
+    &:hover .check {
+      transform: translateX(-100%);
+      // position: relative;
+    }
+    &:hover .prix {
+      transform: translateX(-50px);
+    }
+    &:hover div {
+      margin-right: 50px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     & div {
       width: 100%;
       span:first-child {
@@ -29,6 +44,26 @@
       align-items: flex-end;
       font-weight: bold;
       font-size: 14px;
+      width: 50px;
+      transition: transform 500ms;
+    }
+    .check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: " ";
+      background-color: rgb(50, 211, 189);
+      width: 50px;
+      height: 100%;
+      position: absolute;
+      left: 100%;
+      top: 0px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 500ms;
+      & i {
+        color: white;
+      }
     }
   }
 }
