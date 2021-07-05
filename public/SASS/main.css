@@ -18,6 +18,81 @@ a {
   text-decoration: none;
 }
 
+.loading-spinner {
+  position: absolute;
+  content: " ";
+  background-color: #9356dc;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: opacity;
+  transition: opacity;
+  -webkit-animation: spinner-background 4000ms;
+          animation: spinner-background 4000ms;
+}
+
+.loading-spinner__circle {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+  border: solid 30px black;
+  border-radius: 50%;
+  border-right: solid 30px white;
+  -webkit-animation: spinner 4000ms;
+          animation: spinner 4000ms;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+
+@-webkit-keyframes spinner-background {
+  from {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner-background {
+  from {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 header {
   text-align: center;
   background-color: #f2f2f2;
@@ -61,14 +136,19 @@ header .reservez-menu__bouton {
   width: 60%;
   cursor: pointer;
   postition: relative;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
+  -webkit-box-shadow: 2px 2px 5px #383838;
+          box-shadow: 2px 2px 5px #383838;
+  -webkit-transition: -webkit-box-shadow 200ms;
+  transition: -webkit-box-shadow 200ms;
+  transition: box-shadow 200ms;
+  transition: box-shadow 200ms, -webkit-box-shadow 200ms;
 }
 
 header .reservez-menu__bouton:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  color: #6c27be;
+  -webkit-box-shadow: 2px 2px 10px #383838;
+          box-shadow: 2px 2px 10px #383838;
 }
 
 main .fonctionnement {
@@ -164,6 +244,23 @@ main .container-restaurants .carte-restaurant__heart {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+main .container-restaurants .carte-restaurant__heart .heart-size {
+  font-size: 20px;
+}
+
+main .container-restaurants .carte-restaurant__heart .full {
+  position: absolute;
+  opacity: 0;
+  color: #9356dc;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+main .container-restaurants .carte-restaurant__heart .full:hover {
+  opacity: 1;
 }
 
 main .container-restaurants .carte-restaurant__nouveau {
@@ -249,6 +346,8 @@ main {
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 15px;
+  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
+          box-shadow: 2px 2px 5px #dfdfdf;
 }
 
 .menu__carte--description {
@@ -301,14 +400,19 @@ main {
   width: 60%;
   cursor: pointer;
   postition: relative;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
+  -webkit-box-shadow: 2px 2px 5px #383838;
+          box-shadow: 2px 2px 5px #383838;
+  -webkit-transition: -webkit-box-shadow 200ms;
+  transition: -webkit-box-shadow 200ms;
+  transition: box-shadow 200ms;
+  transition: box-shadow 200ms, -webkit-box-shadow 200ms;
 }
 
 .commander button:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  color: #6c27be;
+  -webkit-box-shadow: 2px 2px 10px #383838;
+          box-shadow: 2px 2px 10px #383838;
 }
 
 .footer-pages-menu {

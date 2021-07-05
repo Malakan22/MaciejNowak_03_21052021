@@ -1,0 +1,16 @@
+@mixin loading-spinner {
+  .spinner {
+    height: 100%;
+    width: 100%;
+    animation: spinner 2000ms;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
