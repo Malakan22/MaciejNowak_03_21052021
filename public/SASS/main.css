@@ -83,8 +83,8 @@ header .loading-spinner {
   z-index: -1;
   -webkit-transition: opacity;
   transition: opacity;
-  -webkit-animation: spinner-background 3000ms;
-          animation: spinner-background 3000ms;
+  -webkit-animation: spinner-background 2000ms;
+          animation: spinner-background 2000ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,8 +103,8 @@ header .loading-spinner__circle {
   border-radius: 50%;
   border-right: solid 30px white;
   border-left: solid 30px white;
-  -webkit-animation: spinner 3000ms;
-          animation: spinner 3000ms;
+  -webkit-animation: spinner 2000ms ease-in-out;
+          animation: spinner 2000ms ease-in-out;
 }
 
 header h1 {
@@ -418,7 +418,8 @@ main {
 }
 
 .menu__carte--description:hover div {
-  margin-right: 50px;
+  max-width: 200px;
+  margin-right: 60px;
   white-space: nowrap;
 }
 
@@ -439,6 +440,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -461,7 +465,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  content: " ";
   background-color: #32d3bd;
   width: 50px;
   height: 100%;

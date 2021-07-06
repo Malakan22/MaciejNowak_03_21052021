@@ -27,7 +27,8 @@
       transform: translateX(-50px);
     }
     &:hover div {
-      margin-right: 50px;
+      max-width: 200px;
+      margin-right: 60px;
       white-space: nowrap;
     }
     & div {
@@ -42,6 +43,7 @@
     }
     .prix {
       display: flex;
+      justify-content: center;
       align-items: flex-end;
       font-weight: bold;
       font-size: 14px;
@@ -52,7 +54,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      content: " ";
       background-color: rgb(50, 211, 189);
       width: 50px;
       height: 100%;
