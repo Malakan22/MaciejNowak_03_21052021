@@ -7,7 +7,6 @@ body {
 
 // HEADER
 
-@include spinner();
 .top {
   &__home {
     background-color: white;
@@ -17,6 +16,7 @@ body {
     a {
       width: 5%;
       padding-left: 25px;
+      color: black;
     }
     h1 {
       width: 100%;
@@ -46,6 +46,26 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-right: 10px;
+  position: relative;
+  & .heart {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+
+    & .full {
+      position: absolute;
+      font-size: 20px;
+      color: red;
+      opacity: 0;
+      background: linear-gradient(to bottom right, $secondaire, $primaire);
+      -webkit-background-clip: text; // background colle au text
+      -webkit-text-fill-color: transparent; //
+      transition: 400ms;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // CARTES MENU

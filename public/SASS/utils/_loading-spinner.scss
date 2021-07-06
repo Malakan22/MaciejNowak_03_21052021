@@ -9,14 +9,10 @@
     z-index: -1;
     transition: opacity;
     animation: spinner-background 3000ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__circle {
-      // opacity: 1;
-      // z-index: 3;
-      width: 100%;
-      margin: auto;
-      position: absolute;
-      top: 35%;
-      left: 30%;
       width: 100px;
       height: 100px;
       border: solid 30px black;
@@ -31,11 +27,9 @@
 @keyframes spinner {
   from {
     transform: rotate(0deg);
-    // opacity: 1;
   }
   to {
     transform: rotate(1440deg);
-    // opacity: 1;
   }
 }
 

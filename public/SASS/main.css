@@ -73,6 +73,40 @@ header {
   background-color: #f2f2f2;
 }
 
+header .loading-spinner {
+  position: absolute;
+  content: " ";
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity;
+  transition: opacity;
+  -webkit-animation: spinner-background 3000ms;
+          animation: spinner-background 3000ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .loading-spinner__circle {
+  width: 100px;
+  height: 100px;
+  border: solid 30px black;
+  border-radius: 50%;
+  border-right: solid 30px white;
+  border-left: solid 30px white;
+  -webkit-animation: spinner 3000ms;
+          animation: spinner 3000ms;
+}
+
 header h1 {
   font-family: "shrikhand";
   background-color: white;
@@ -257,36 +291,6 @@ body {
   background-color: #f2f2f2;
 }
 
-.loading-spinner {
-  position: absolute;
-  content: " ";
-  background-color: white;
-  height: 100vh;
-  width: 100%;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity;
-  transition: opacity;
-  -webkit-animation: spinner-background 3000ms;
-          animation: spinner-background 3000ms;
-}
-
-.loading-spinner__circle {
-  width: 100%;
-  margin: auto;
-  position: absolute;
-  top: 35%;
-  left: 30%;
-  width: 100px;
-  height: 100px;
-  border: solid 30px black;
-  border-radius: 50%;
-  border-right: solid 30px white;
-  border-left: solid 30px white;
-  -webkit-animation: spinner 3000ms;
-          animation: spinner 3000ms;
-}
-
 .top__home {
   background-color: white;
   display: -webkit-box;
@@ -303,6 +307,7 @@ body {
 .top__home a {
   width: 5%;
   padding-left: 25px;
+  color: black;
 }
 
 .top__home h1 {
@@ -340,6 +345,34 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 10px;
+  position: relative;
+}
+
+.titre-restaurant .heart {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.titre-restaurant .heart .full {
+  position: absolute;
+  font-size: 20px;
+  color: red;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.titre-restaurant .heart .full:hover {
+  opacity: 1;
 }
 
 .menu__souligner {
@@ -369,6 +402,11 @@ main {
           justify-content: space-evenly;
 }
 
+.menu__carte--description div span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menu__carte--description:hover .check {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -382,8 +420,6 @@ main {
 .menu__carte--description:hover div {
   margin-right: 50px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menu__carte--description div {

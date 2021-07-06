@@ -3,7 +3,7 @@
 header {
   text-align: center;
   background-color: $gris-pale;
-
+  @include spinner();
   h1 {
     font-family: "shrikhand";
     background-color: white;
@@ -21,9 +21,6 @@ header {
       background-color: $gris;
       padding: 10px;
       border: none;
-      // &:focus {
-      //   border: none;
-      // }
     }
   }
 

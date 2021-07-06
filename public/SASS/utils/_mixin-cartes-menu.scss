@@ -16,9 +16,12 @@
   &--description {
     display: flex;
     justify-content: space-evenly;
+    & div span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     &:hover .check {
       transform: translateX(-100%);
-      // position: relative;
     }
     &:hover .prix {
       transform: translateX(-50px);
@@ -26,8 +29,6 @@
     &:hover div {
       margin-right: 50px;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
     & div {
       width: 100%;
