@@ -229,7 +229,10 @@ main .container-restaurants .carte-restaurant__heart .heart-size {
 main .container-restaurants .carte-restaurant__heart .full {
   position: absolute;
   opacity: 0;
-  color: #9356dc;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-transition: opacity 400ms;
   transition: opacity 400ms;
 }

@@ -117,12 +117,10 @@
       & .full {
         position: absolute;
         opacity: 0;
-        color: $primaire;
-        // // background-image: linear-gradient(
-        // //   to bottom right,
-        // //   $secondaire,
-        // //   $primaire
-        // );
+        // color: $primaire;
+        background: linear-gradient(to bottom right, $secondaire, $primaire);
+        -webkit-background-clip: text; // background colle au text
+        -webkit-text-fill-color: transparent; //
         transition: opacity 400ms;
         &:hover {
           opacity: 1;
