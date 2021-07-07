@@ -286,6 +286,32 @@ main .container-restaurants .carte-restaurant__nouveau {
   border-radius: 3px;
 }
 
+@-webkit-keyframes apparition-menu {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apparition-menu {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 body {
   position: relative;
   background-color: #f2f2f2;
@@ -331,6 +357,51 @@ main {
   padding: 30px 20px;
   padding-top: 10px;
   border-radius: 25px;
+}
+
+main section.menu:nth-child(1) {
+  -webkit-animation: apparition-menu 1500ms 200ms both;
+          animation: apparition-menu 1500ms 200ms both;
+}
+
+main section.menu:nth-child(2) {
+  -webkit-animation: apparition-menu 1500ms 400ms both;
+          animation: apparition-menu 1500ms 400ms both;
+}
+
+main section.menu:nth-child(3) {
+  -webkit-animation: apparition-menu 1500ms 600ms both;
+          animation: apparition-menu 1500ms 600ms both;
+}
+
+main section.menu:nth-child(4) {
+  -webkit-animation: apparition-menu 1500ms 800ms both;
+          animation: apparition-menu 1500ms 800ms both;
+}
+
+main section.menu:nth-child(5) {
+  -webkit-animation: apparition-menu 1500ms 1000ms both;
+          animation: apparition-menu 1500ms 1000ms both;
+}
+
+main section.menu:nth-child(6) {
+  -webkit-animation: apparition-menu 1500ms 1200ms both;
+          animation: apparition-menu 1500ms 1200ms both;
+}
+
+main section.menu:nth-child(7) {
+  -webkit-animation: apparition-menu 1500ms 1400ms both;
+          animation: apparition-menu 1500ms 1400ms both;
+}
+
+main section.menu:nth-child(8) {
+  -webkit-animation: apparition-menu 1500ms 1600ms both;
+          animation: apparition-menu 1500ms 1600ms both;
+}
+
+main section.menu:nth-child(9) {
+  -webkit-animation: apparition-menu 1500ms 1800ms both;
+          animation: apparition-menu 1500ms 1800ms both;
 }
 
 .titre-restaurant {
@@ -412,6 +483,11 @@ main {
           transform: translateX(-100%);
 }
 
+.menu__carte--description:hover .check i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .menu__carte--description:hover .prix {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
@@ -481,6 +557,10 @@ main {
 
 .menu__carte--description .check i {
   color: white;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .commander {

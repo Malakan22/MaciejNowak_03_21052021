@@ -5,6 +5,30 @@
   margin-bottom: 10px;
 }
 
+$num-cartes-menu: 9;
+$app-duration: 1500ms;
+$app-delay: 200ms;
+@mixin appmenu {
+  @for $i from 1 through $num-cartes-menu {
+    section.menu:nth-child(#{$i}) {
+      animation: apparition-menu $app-duration ($app-delay * $i) both;
+    }
+  }
+}
+
+@keyframes apparition-menu {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+$transform-time: 500ms;
+
 @mixin cartes-menu {
   background-color: white;
   border-radius: 10px;
@@ -22,6 +46,9 @@
     }
     &:hover .check {
       transform: translateX(-100%);
+      & i {
+        transform: rotate(360deg);
+      }
     }
     &:hover .prix {
       transform: translateX(-50px);
@@ -48,7 +75,7 @@
       font-weight: bold;
       font-size: 14px;
       width: 50px;
-      transition: transform 500ms;
+      transition: transform $transform-time;
     }
     .check {
       display: flex;
@@ -62,9 +89,11 @@
       top: 0px;
       border-bottom-right-radius: 10px;
       border-top-right-radius: 10px;
-      transition: transform 500ms;
+      transition: transform $transform-time;
+
       & i {
         color: white;
+        transition: transform $transform-time;
       }
     }
   }

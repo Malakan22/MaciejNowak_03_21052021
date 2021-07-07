@@ -32,6 +32,7 @@ body {
 
 // MAIN
 main {
+  @include appmenu();
   background-color: $gris-pale;
   position: relative;
   top: -50px;
