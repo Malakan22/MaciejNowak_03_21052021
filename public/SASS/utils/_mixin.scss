@@ -162,4 +162,9 @@
     font-family: "shrikhand";
     font-weight: 500;
   }
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }

@@ -55,6 +55,7 @@ main {
     @include style-bouton-fonctionnement();
     @media screen and(min-width:992px) {
       display: flex;
+      border-radius: 15px;
       .fonctionnement__bouton {
         width: 100%;
         padding: 0px 20px;
