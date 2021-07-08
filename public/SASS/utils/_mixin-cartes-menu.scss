@@ -1,3 +1,4 @@
+//souligne les titres ENTREES, PLATS ET DESSERTS
 @mixin souligner {
   content: "";
   width: 40px;
@@ -5,28 +6,7 @@
   margin-bottom: 10px;
 }
 
-$num-cartes-menu: 9;
-$app-duration: 1500ms;
-$app-delay: 200ms;
-@mixin appmenu {
-  @for $i from 1 through $num-cartes-menu {
-    section.menu:nth-child(#{$i}) {
-      animation: apparition-menu $app-duration ($app-delay * $i) both;
-    }
-  }
-}
-
-@keyframes apparition-menu {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+// CARTES POUR LES MENUS
 $transform-time: 500ms;
 
 @mixin cartes-menu {
@@ -43,6 +23,9 @@ $transform-time: 500ms;
     & div span {
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    &:hover {
+      cursor: pointer;
     }
     &:hover .check {
       transform: translateX(-100%);

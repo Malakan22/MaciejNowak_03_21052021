@@ -1,5 +1,12 @@
 // Page d'acceuil : home.scss
 
+body {
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    margin: auto;
+  }
+}
+
 header {
   text-align: center;
   background-color: $gris-pale;
@@ -22,6 +29,13 @@ header {
       padding: 10px;
       border: none;
     }
+    @media screen and(min-width:992px) {
+      width: 40%;
+      margin: auto;
+      border-radius: 20px;
+      margin-top: 10px;
+      @include box-shadow($gris-pale);
+    }
   }
 
   #home-page {
@@ -39,6 +53,13 @@ main {
     background-color: white;
     padding: $padding-container;
     @include style-bouton-fonctionnement();
+    @media screen and(min-width:992px) {
+      display: flex;
+      .fonctionnement__bouton {
+        width: 100%;
+        padding: 0px 20px;
+      }
+    }
   }
 
   // SECTION CARTES RESTAURANTS

@@ -18,10 +18,40 @@ a {
   text-decoration: none;
 }
 
+@-webkit-keyframes apparition-menu {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apparition-menu {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
   }
   to {
     -webkit-transform: rotate(1440deg);
@@ -34,6 +64,10 @@ a {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+  80% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
   to {
     -webkit-transform: rotate(1440deg);
             transform: rotate(1440deg);
@@ -45,7 +79,7 @@ a {
     z-index: 2;
     opacity: 0.8;
   }
-  95% {
+  80% {
     opacity: 0.8;
   }
   to {
@@ -59,12 +93,19 @@ a {
     z-index: 2;
     opacity: 0.8;
   }
-  95% {
+  80% {
     opacity: 0.8;
   }
   to {
     opacity: 0;
     z-index: 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -75,6 +116,7 @@ header {
 
 header .loading-spinner {
   position: absolute;
+  top: 0;
   content: " ";
   background-color: white;
   height: 100vh;
@@ -83,8 +125,8 @@ header .loading-spinner {
   z-index: -1;
   -webkit-transition: opacity;
   transition: opacity;
-  -webkit-animation: spinner-background 2000ms;
-          animation: spinner-background 2000ms;
+  -webkit-animation: spinner-background 1500ms;
+          animation: spinner-background 1500ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,14 +139,14 @@ header .loading-spinner {
 }
 
 header .loading-spinner__circle {
-  width: 100px;
-  height: 100px;
-  border: solid 30px black;
+  width: 80px;
+  height: 80px;
+  border: solid 15px #481a7f;
   border-radius: 50%;
-  border-right: solid 30px white;
-  border-left: solid 30px white;
-  -webkit-animation: spinner 2000ms ease-in-out;
-          animation: spinner 2000ms ease-in-out;
+  border-right: solid 15px white;
+  border-left: solid 15px white;
+  -webkit-animation: spinner 1500ms ease-in-out;
+          animation: spinner 1500ms ease-in-out;
 }
 
 header h1 {
@@ -113,8 +155,8 @@ header h1 {
   margin: 0px;
   margin-bottom: 2px;
   padding: 10px;
-  -webkit-box-shadow: 2px 2px 5px #b8b8b8;
-          box-shadow: 2px 2px 5px #b8b8b8;
+  -webkit-box-shadow: 0px 2px 5px #b8b8b8;
+          box-shadow: 0px 2px 5px #b8b8b8;
 }
 
 header .adresse {
@@ -127,6 +169,17 @@ header .adresse__input {
   background-color: #dfdfdf;
   padding: 10px;
   border: none;
+}
+
+@media screen and (min-width: 992px) {
+  header .adresse {
+    width: 40%;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 2px 5px #f2f2f2;
+            box-shadow: 0px 2px 5px #f2f2f2;
+  }
 }
 
 header #home-page {
@@ -143,10 +196,11 @@ header .reservez-menu__bouton {
   color: white;
   font-weight: 700;
   width: 60%;
+  max-width: 250px;
   cursor: pointer;
   postition: relative;
-  -webkit-box-shadow: 2px 2px 5px #383838;
-          box-shadow: 2px 2px 5px #383838;
+  -webkit-box-shadow: 0px 2px 5px #383838;
+          box-shadow: 0px 2px 5px #383838;
   -webkit-transition: -webkit-box-shadow 200ms;
   transition: -webkit-box-shadow 200ms;
   transition: box-shadow 200ms;
@@ -171,6 +225,10 @@ main .fonctionnement__bouton {
   margin-bottom: 20px;
 }
 
+main .fonctionnement__bouton:hover {
+  color: #9356dc;
+}
+
 main .fonctionnement__bouton span {
   background-color: #9356dc;
   padding: 3px 7px;
@@ -181,14 +239,22 @@ main .fonctionnement__bouton span {
   top: 17px;
 }
 
+@media (min-width: 992px) {
+  main .fonctionnement__bouton span {
+    left: 15px;
+  }
+}
+
 main .fonctionnement__bouton i {
   position: absolute;
   left: 12%;
   top: 20px;
 }
 
-main .fonctionnement__bouton i:hover {
-  color: #9356dc;
+@media (min-width: 992px) {
+  main .fonctionnement__bouton i {
+    left: 15%;
+  }
 }
 
 main .fonctionnement__bouton button {
@@ -197,12 +263,24 @@ main .fonctionnement__bouton button {
   border: none;
   border-radius: 20px;
   font-weight: 700;
-  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
-          box-shadow: 2px 2px 5px #dfdfdf;
+  -webkit-box-shadow: 0px 2px 5px #dfdfdf;
+          box-shadow: 0px 2px 5px #dfdfdf;
 }
 
 main .fonctionnement__bouton button:hover {
   background-color: #e4d5f6;
+}
+
+@media screen and (min-width: 992px) {
+  main .fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .fonctionnement .fonctionnement__bouton {
+    width: 100%;
+    padding: 0px 20px;
+  }
 }
 
 main .container-restaurants {
@@ -227,8 +305,8 @@ main .container-restaurants .carte-restaurant {
   border-radius: 15px;
   height: 200px;
   cursor: pointer;
-  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
-          box-shadow: 2px 2px 5px #dfdfdf;
+  -webkit-box-shadow: 0px 2px 5px #dfdfdf;
+          box-shadow: 0px 2px 5px #dfdfdf;
 }
 
 main .container-restaurants .carte-restaurant img {
@@ -286,32 +364,6 @@ main .container-restaurants .carte-restaurant__nouveau {
   border-radius: 3px;
 }
 
-@-webkit-keyframes apparition-menu {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes apparition-menu {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 body {
   position: relative;
   background-color: #f2f2f2;
@@ -360,48 +412,48 @@ main {
 }
 
 main section.menu:nth-child(1) {
-  -webkit-animation: apparition-menu 1500ms 200ms both;
-          animation: apparition-menu 1500ms 200ms both;
+  -webkit-animation: apparition-menu 1200ms 150ms both;
+          animation: apparition-menu 1200ms 150ms both;
 }
 
 main section.menu:nth-child(2) {
-  -webkit-animation: apparition-menu 1500ms 400ms both;
-          animation: apparition-menu 1500ms 400ms both;
+  -webkit-animation: apparition-menu 1200ms 300ms both;
+          animation: apparition-menu 1200ms 300ms both;
 }
 
 main section.menu:nth-child(3) {
-  -webkit-animation: apparition-menu 1500ms 600ms both;
-          animation: apparition-menu 1500ms 600ms both;
+  -webkit-animation: apparition-menu 1200ms 450ms both;
+          animation: apparition-menu 1200ms 450ms both;
 }
 
 main section.menu:nth-child(4) {
-  -webkit-animation: apparition-menu 1500ms 800ms both;
-          animation: apparition-menu 1500ms 800ms both;
+  -webkit-animation: apparition-menu 1200ms 600ms both;
+          animation: apparition-menu 1200ms 600ms both;
 }
 
 main section.menu:nth-child(5) {
-  -webkit-animation: apparition-menu 1500ms 1000ms both;
-          animation: apparition-menu 1500ms 1000ms both;
+  -webkit-animation: apparition-menu 1200ms 750ms both;
+          animation: apparition-menu 1200ms 750ms both;
 }
 
 main section.menu:nth-child(6) {
-  -webkit-animation: apparition-menu 1500ms 1200ms both;
-          animation: apparition-menu 1500ms 1200ms both;
+  -webkit-animation: apparition-menu 1200ms 900ms both;
+          animation: apparition-menu 1200ms 900ms both;
 }
 
 main section.menu:nth-child(7) {
-  -webkit-animation: apparition-menu 1500ms 1400ms both;
-          animation: apparition-menu 1500ms 1400ms both;
+  -webkit-animation: apparition-menu 1200ms 1050ms both;
+          animation: apparition-menu 1200ms 1050ms both;
 }
 
 main section.menu:nth-child(8) {
-  -webkit-animation: apparition-menu 1500ms 1600ms both;
-          animation: apparition-menu 1500ms 1600ms both;
+  -webkit-animation: apparition-menu 1200ms 1200ms both;
+          animation: apparition-menu 1200ms 1200ms both;
 }
 
 main section.menu:nth-child(9) {
-  -webkit-animation: apparition-menu 1500ms 1800ms both;
-          animation: apparition-menu 1500ms 1800ms both;
+  -webkit-animation: apparition-menu 1200ms 1350ms both;
+          animation: apparition-menu 1200ms 1350ms both;
 }
 
 .titre-restaurant {
@@ -460,8 +512,8 @@ main section.menu:nth-child(9) {
   margin-bottom: 15px;
   position: relative;
   overflow: hidden;
-  -webkit-box-shadow: 2px 2px 5px #dfdfdf;
-          box-shadow: 2px 2px 5px #dfdfdf;
+  -webkit-box-shadow: 0px 2px 5px #dfdfdf;
+          box-shadow: 0px 2px 5px #dfdfdf;
 }
 
 .menu__carte--description {
@@ -476,6 +528,10 @@ main section.menu:nth-child(9) {
 .menu__carte--description div span {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.menu__carte--description:hover {
+  cursor: pointer;
 }
 
 .menu__carte--description:hover .check {
@@ -578,10 +634,11 @@ main section.menu:nth-child(9) {
   color: white;
   font-weight: 700;
   width: 60%;
+  max-width: 250px;
   cursor: pointer;
   postition: relative;
-  -webkit-box-shadow: 2px 2px 5px #383838;
-          box-shadow: 2px 2px 5px #383838;
+  -webkit-box-shadow: 0px 2px 5px #383838;
+          box-shadow: 0px 2px 5px #383838;
   -webkit-transition: -webkit-box-shadow 200ms;
   transition: -webkit-box-shadow 200ms;
   transition: box-shadow 200ms;

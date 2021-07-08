@@ -1,0 +1,24 @@
+//animations pour l'apparition avec delai des cartes sur les pages menu
+
+$num-cartes-menu: 9;
+$app-duration: 1200ms;
+$app-delay: 150ms;
+
+@mixin app-menu {
+  @for $i from 1 through $num-cartes-menu {
+    section.menu:nth-child(#{$i}) {
+      animation: apparition-menu $app-duration ($app-delay * $i) both;
+    }
+  }
+}
+
+@keyframes apparition-menu {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,6 +1,11 @@
+$spinner-border-size: 15px;
+$spinner-size: 80px;
+$anim-duration: 1500ms;
+
 @mixin spinner {
   .loading-spinner {
     position: absolute;
+    top: 0;
     content: " ";
     background-color: white;
     height: 100vh;
@@ -8,18 +13,18 @@
     opacity: 0;
     z-index: -1;
     transition: opacity;
-    animation: spinner-background 2000ms;
+    animation: spinner-background $anim-duration;
     display: flex;
     justify-content: center;
     align-items: center;
     &__circle {
-      width: 100px;
-      height: 100px;
-      border: solid 30px black;
+      width: $spinner-size;
+      height: $spinner-size;
+      border: solid $spinner-border-size darken($primaire, 30%);
       border-radius: 50%;
-      border-right: solid 30px white;
-      border-left: solid 30px white;
-      animation: spinner 2000ms ease-in-out;
+      border-right: solid $spinner-border-size white;
+      border-left: solid $spinner-border-size white;
+      animation: spinner $anim-duration ease-in-out;
     }
   }
 }
@@ -27,6 +32,9 @@
 @keyframes spinner {
   from {
     transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(1440deg);
   }
   to {
     transform: rotate(1440deg);
@@ -38,7 +46,7 @@
     z-index: 2;
     opacity: 0.8;
   }
-  95% {
+  80% {
     opacity: 0.8;
   }
   to {
