@@ -96,7 +96,10 @@
     border-radius: 15px;
     height: 200px;
     cursor: pointer;
-
+    @media (min-width: $media-query) {
+      width: 350px;
+      margin: 20px 20px;
+    }
     @include box-shadow($gris);
     img {
       border-top-left-radius: 15px;
@@ -142,29 +145,5 @@
       font-weight: bold;
       border-radius: 3px;
     }
-  }
-}
-
-// FOOTER
-
-@mixin style_footer {
-  color: white;
-  background-color: $gris-fonce;
-  padding: $padding-container;
-
-  a {
-    color: white;
-    &:hover {
-      color: $primaire;
-    }
-  }
-  h3 {
-    font-family: "shrikhand";
-    font-weight: 500;
-  }
-  @media (min-width: 992px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
   }
 }

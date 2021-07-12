@@ -1,3 +1,27 @@
+// FOOTER
+
+@mixin style_footer {
+  color: white;
+  background-color: $gris-fonce;
+  padding: $padding-container;
+
+  a {
+    color: white;
+    &:hover {
+      color: $primaire;
+    }
+  }
+  h3 {
+    font-family: "shrikhand";
+    font-weight: 500;
+  }
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
 footer {
   @include style_footer();
 }

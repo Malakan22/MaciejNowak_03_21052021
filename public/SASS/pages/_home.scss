@@ -29,7 +29,7 @@ header {
       padding: 10px;
       border: none;
     }
-    @media screen and(min-width:992px) {
+    @media screen and(min-width:$media-query) {
       width: 40%;
       margin: auto;
       border-radius: 20px;
@@ -53,9 +53,10 @@ main {
     background-color: white;
     padding: $padding-container;
     @include style-bouton-fonctionnement();
-    @media screen and(min-width:992px) {
+    @media screen and(min-width:$media-query) {
       display: flex;
       border-radius: 15px;
+      width: 100%;
       .fonctionnement__bouton {
         width: 100%;
         padding: 0px 20px;
@@ -65,6 +66,15 @@ main {
 
   // SECTION CARTES RESTAURANTS
   .container-restaurants {
+    @media (min-width: $media-query) {
+      h2 {
+        width: 100%;
+      }
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+    }
     background-color: $gris-pale;
     padding: $padding-container;
     a,
