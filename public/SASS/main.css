@@ -389,6 +389,26 @@ main .container-restaurants .carte-restaurant__nouveau {
   border-radius: 3px;
 }
 
+@media (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__titre {
+    width: 100%;
+  }
+}
+
 body {
   position: relative;
   background-color: #f2f2f2;
@@ -436,47 +456,47 @@ main {
   border-radius: 25px;
 }
 
-main section.menu:nth-child(1) {
+main div.menu:nth-child(1) {
   -webkit-animation: apparition-menu 1200ms 150ms both;
           animation: apparition-menu 1200ms 150ms both;
 }
 
-main section.menu:nth-child(2) {
+main div.menu:nth-child(2) {
   -webkit-animation: apparition-menu 1200ms 300ms both;
           animation: apparition-menu 1200ms 300ms both;
 }
 
-main section.menu:nth-child(3) {
+main div.menu:nth-child(3) {
   -webkit-animation: apparition-menu 1200ms 450ms both;
           animation: apparition-menu 1200ms 450ms both;
 }
 
-main section.menu:nth-child(4) {
+main div.menu:nth-child(4) {
   -webkit-animation: apparition-menu 1200ms 600ms both;
           animation: apparition-menu 1200ms 600ms both;
 }
 
-main section.menu:nth-child(5) {
+main div.menu:nth-child(5) {
   -webkit-animation: apparition-menu 1200ms 750ms both;
           animation: apparition-menu 1200ms 750ms both;
 }
 
-main section.menu:nth-child(6) {
+main div.menu:nth-child(6) {
   -webkit-animation: apparition-menu 1200ms 900ms both;
           animation: apparition-menu 1200ms 900ms both;
 }
 
-main section.menu:nth-child(7) {
+main div.menu:nth-child(7) {
   -webkit-animation: apparition-menu 1200ms 1050ms both;
           animation: apparition-menu 1200ms 1050ms both;
 }
 
-main section.menu:nth-child(8) {
+main div.menu:nth-child(8) {
   -webkit-animation: apparition-menu 1200ms 1200ms both;
           animation: apparition-menu 1200ms 1200ms both;
 }
 
-main section.menu:nth-child(9) {
+main div.menu:nth-child(9) {
   -webkit-animation: apparition-menu 1200ms 1350ms both;
           animation: apparition-menu 1200ms 1350ms both;
 }
@@ -530,6 +550,12 @@ main section.menu:nth-child(9) {
   margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+  .menu__souligner {
+    width: 100%;
+  }
+}
+
 .menu__carte {
   background-color: white;
   border-radius: 10px;
@@ -539,6 +565,12 @@ main section.menu:nth-child(9) {
   overflow: hidden;
   -webkit-box-shadow: 0px 2px 5px #dfdfdf;
           box-shadow: 0px 2px 5px #dfdfdf;
+}
+
+@media (min-width: 768px) {
+  .menu__carte {
+    width: 300px;
+  }
 }
 
 .menu__carte--description {

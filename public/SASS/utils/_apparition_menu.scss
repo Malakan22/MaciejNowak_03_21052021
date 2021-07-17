@@ -6,7 +6,7 @@ $app-delay: 150ms;
 
 @mixin app-menu {
   @for $i from 1 through $num-cartes-menu {
-    section.menu:nth-child(#{$i}) {
+    div.menu:nth-child(#{$i}) {
       animation: apparition-menu $app-duration ($app-delay * $i) both;
     }
   }

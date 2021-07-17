@@ -4,12 +4,32 @@
   width: 40px;
   border-top: solid 2px $tertiaire;
   margin-bottom: 10px;
+  @media (min-width: $media-query) {
+    width: 100%;
+  }
 }
 
 // CARTES POUR LES MENUS
 $transform-time: 500ms;
 
+.menu {
+  @media (min-width: $media-query) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__titre {
+    @media (min-width: $media-query) {
+      width: 100%;
+    }
+  }
+}
+
 @mixin cartes-menu {
+  @media (min-width: $media-query) {
+    width: 300px;
+  }
   background-color: white;
   border-radius: 10px;
   padding: 10px;
