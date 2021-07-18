@@ -575,6 +575,7 @@ main div.menu:nth-child(9) {
 
 @media (min-width: 768px) {
   .menu__carte {
+    width: 300px;
     margin-right: 10px;
   }
 }
