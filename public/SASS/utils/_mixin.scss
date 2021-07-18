@@ -29,24 +29,13 @@
   }
 }
 
-// bouton-principale::after {
-//   content: "";
-//   position: absolute;
-//   z-index: -1;
-//   width: 100%;
-//   height: 100%;
-//   opacity: 0;
-//   border-radius: 5px;
-//   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-//   transition: opacity 0.3s ease-in-out;
-// }
-
 // les styles des boutons de la section .fonctionnement de la page d'acceuil
 @mixin style-bouton-fonctionnement {
   &__bouton {
     text-align: center;
     position: relative;
     margin-bottom: 20px;
+    max-width: 300px;
     &:hover {
       color: $primaire;
     }
@@ -58,7 +47,7 @@
       position: absolute;
       left: 0px;
       top: 17px;
-      @media (min-width: 992px) {
+      @media (min-width: $media-query) {
         left: 15px;
       }
     }
@@ -66,13 +55,14 @@
       position: absolute;
       left: 12%;
       top: 20px;
-      @media (min-width: 992px) {
+      @media (min-width: $media-query) {
         left: 15%;
       }
     }
 
     button {
       width: 95%;
+      min-width: 250px;
       padding: 20px;
       border: none;
       border-radius: 20px;

@@ -1,7 +1,7 @@
 // Page d'acceuil : home.scss
 
 body {
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $media-query) {
     width: 80%;
     margin: auto;
   }
@@ -55,8 +55,11 @@ main {
     @include style-bouton-fonctionnement();
     @media screen and(min-width:$media-query) {
       display: flex;
+      flex-wrap: wrap;
       border-radius: 15px;
-      width: 100%;
+      h2 {
+        width: 100%;
+      }
       .fonctionnement__bouton {
         width: 100%;
         padding: 0px 20px;

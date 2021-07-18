@@ -1,8 +1,7 @@
-$spinner-border-size: 15px;
-$spinner-size: 80px;
-$anim-duration: 1500ms;
-
 @mixin spinner {
+  $spinner-border-size: 15px;
+  $spinner-size: 80px;
+  $anim-duration: 1500ms;
   .loading-spinner {
     position: fixed;
     top: 0;

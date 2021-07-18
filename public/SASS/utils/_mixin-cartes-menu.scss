@@ -28,7 +28,7 @@ $transform-time: 500ms;
 
 @mixin cartes-menu {
   @media (min-width: $media-query) {
-    width: 300px;
+    margin-right: 10px;
   }
   background-color: white;
   border-radius: 10px;
