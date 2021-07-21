@@ -117,6 +117,7 @@ header {
 header .loading-spinner {
   position: fixed;
   top: 0;
+  left: 0;
   content: " ";
   background-color: white;
   height: 100vh;
@@ -328,6 +329,7 @@ main .container-restaurants .carte-restaurant {
       flex-wrap: wrap;
   border-radius: 15px;
   height: 200px;
+  max-width: 350px;
   cursor: pointer;
   -webkit-box-shadow: 0px 2px 5px #dfdfdf;
           box-shadow: 0px 2px 5px #dfdfdf;
@@ -563,6 +565,7 @@ main div.menu:nth-child(9) {
 }
 
 .menu__carte {
+  max-width: 300px;
   background-color: white;
   border-radius: 10px;
   padding: 10px;

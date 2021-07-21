@@ -73,10 +73,10 @@ main {
 
 .menu {
   &__souligner {
-    @include souligner();
+    @include souligner(); // dans _mixin-cartes-menu.scss
   }
   &__carte {
-    @include cartes-menu();
+    @include cartes-menu(); // dans _mixin-cartes-menu.scss
   }
 }
 
@@ -84,7 +84,7 @@ main {
   text-align: center;
   margin-top: 40px;
   button {
-    @include bouton-principale();
+    @include bouton-principale(); // dans _mixin.scss
   }
 }
 

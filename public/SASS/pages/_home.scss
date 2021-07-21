@@ -85,6 +85,6 @@ main {
       color: black;
     }
 
-    @include style-carte-restaurant();
+    @include style-carte-restaurant(); // dans _mixin.scss
   }
 }

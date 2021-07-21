@@ -85,6 +85,7 @@
     flex-wrap: wrap;
     border-radius: 15px;
     height: 200px;
+    max-width: 350px;
     cursor: pointer;
     @media (min-width: $media-query) {
       width: 350px;
