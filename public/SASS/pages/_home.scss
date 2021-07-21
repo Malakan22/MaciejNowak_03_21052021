@@ -53,6 +53,7 @@ main {
     background-color: white;
     padding: $padding-container;
     @include style-bouton-fonctionnement();
+
     @media screen and(min-width:$media-query) {
       display: flex;
       flex-wrap: wrap;
@@ -69,15 +70,12 @@ main {
 
   // SECTION CARTES RESTAURANTS
   .container-restaurants {
-    @media (min-width: $media-query) {
-      h2 {
-        width: 100%;
-      }
-      display: flex;
-      flex-wrap: wrap;
+    h2 {
       width: 100%;
-      justify-content: space-around;
     }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: $gris-pale;
     padding: $padding-container;
     a,
